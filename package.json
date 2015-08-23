@@ -1,0 +1,25 @@
+{
+  "name": "angular-immutable-textbox",
+  "version": "0.0.1",
+  "description": "An angular directive for creating an immutable textbox that only allows copying, ideal for sharing urls.",
+  "main": "./dist/angular-immutable-textbox.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Craterdome/angular-immutable-textbox.git"
+  },
+  "keywords": [
+    "sharing",
+    "immutable",
+    "textbox",
+    "angular",
+    "angularjs"
+  ],
+  "author": "Matthew Farver <craterdome@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Craterdome/angular-immutable-textbox/issues"
+  }
+}

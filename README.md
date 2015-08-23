@@ -19,14 +19,14 @@ AngularJS v1.3+ (tested, probably works on lower)
 
 ## Load
 
-To use the directive, include the angular socialshare's javascript file in your web page:
+To use the directive, include the angular-immutable-textbox javascript file in your web page:
 
 ```html
 <!DOCTYPE HTML>
 <html>
 <body ng-app="app">
   //.....
-  <script src="src/js/angular-socialshare.js"></script>
+  <script src="src/js/angular-immutable-textbox.js"></script>
 </body>
 </html>
 ```
@@ -44,7 +44,7 @@ $ bower install angular-immutable-textbox --save
 $ npm install angular-immutable-textbox --save
 ```
 
-_then [load](https://github.com/720kb/angular-socialshare#load) it in your html_
+_then [load](https://github.com/Craterdome/angular-immutable-textbox#load) it in your html_
 
 ###Add module dependency
 Add the craterdome.immutableTextbox module dependency

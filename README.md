@@ -59,37 +59,45 @@ angular.module('app', [
 Call the directive wherever you want in your angular html, add auto-click to make it highlighted automatically
 
 ```html
-
 <input type="text" ng-value="shareURL" immutable-textbox auto-click >
-
+```
 
 ##Alternative Installation
 
 The directive itself is pretty simple, therefore it might be easier to simply fork the directive into your app.
 
-    function immutableTextbox() {
-        return {
-            link: function(scope, elem, attrs) {
-                elem[0].onkeypress = function validate(evt) {
-                    var theEvent = evt || window.event;
-                    var key = theEvent.charCode || theEvent.which;
-                    if (key != 99 || (undefined === theEvent.ctrlKey || !theEvent.ctrlKey)) {
-                        if(theEvent.preventDefault) theEvent.preventDefault();
-                        else theEvent.returnValue = false;
-                    }
-                }
-                elem[0].onclick = function() {
-                    elem[0].focus();
-                    elem[0].select();
-                    return false;
-                }
-                setTimeout(function() {
-                    elem[0].focus();
-                    elem[0].select();
-                }, 100);
-            }
-        };
-    }
-    immutableTextbox.$inject = [];
+```js
+function immutableTextbox() {
+  return {
+      restrict: 'A',
+      link: function ($scope, elem, attr) {
+          var raw = elem[0];
+          raw.onkeypress = function validate (evt) {
+              var theEvent = evt || window.event;
+              var key = theEvent.charCode || theEvent.which;
+              if (key !== 99 || (undefined === theEvent.ctrlKey || !theEvent.ctrlKey)) {
+                  if (theEvent.preventDefault) {
+                      theEvent.preventDefault();
+                  } else {
+                      theEvent.returnValue = false;
+                  }
+              }
+          }
+          raw.onclick = function () {
+              raw.focus();
+              raw.select();
+              return false;
+          }
+          if (attr.hasOwnProperty('autoClick')) {
+              setTimeout(function () {
+                  raw.focus();
+                  raw.select();
+              }, 100);
+          }
+      }
+  };
+}
+immutableTextbox.$inject = [];
 
-    app.directive('immutableTextbox', immutableTextbox);
+app.directive('immutableTextbox', immutableTextbox);
+```

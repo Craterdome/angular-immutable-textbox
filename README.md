@@ -15,7 +15,7 @@ AngularJS v1.3+ (tested, probably works on lower)
 
 ![Chrome](https://raw.github.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![IE](https://raw.github.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Opera](https://raw.github.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/alrra/browser-logos/master/safari/safari_48x48.png)
 --- | --- | --- | --- | --- |
- ✔ | ✔ | IE9 + | ✔ | ✔ |
+ ✔ | ✔ | Testing soon | Testing soon | Testing soon |
 
 ## Load
 
